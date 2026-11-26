@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, lightblue, lavender);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            background-color: white;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 25px;
+            border: 2px solid blue;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px gray;
+        }
+
+        fieldset {
+            border: 2px solid lightblue;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        legend {
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid gray;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: blue;
+            box-shadow: 0 0 5px lightblue;
+        }
+
+        .gender {
+            margin-top: 10px;
+        }
+
+        .gender label {
+            display: inline;
+            margin-right: 8px;
+            font-weight: normal;
+        }
+
+        .terms {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: green;
+        }
+
+        button[type="reset"] {
+            background-color: red;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+    <fieldset>
+        <legend>Registration Details</legend>
+
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Father's Name:</label>
+        <input type="text" name="fathername" required>
+
+        <label>Contact Number:</label>
+        <input type="tel" name="contact" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" required>
+
+        <label>Address:</label>
+        <textarea rows="3" name="address" required></textarea>
+
+        <label>Gender:</label>
+        <div class="gender">
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+        </div>
+
+        <div class="terms">
+            <input type="checkbox" required>
+            I accept Terms & Conditions
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </div>
+    </fieldset>
+</form>
+
+</body>
+</html>
